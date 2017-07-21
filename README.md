@@ -1,11 +1,8 @@
 # Ronglianyun
 
-**TODO: Add description**
+http://www.yuntongxun.com/doc/rest/voicecode/3_3_2_1.html
 
 ## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ronglianyun` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -13,7 +10,15 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ronglianyun](https://hexdocs.pm/ronglianyun).
+## Configuration
+
+```elixir
+# config/prod.secret.exs
+config :ronglianyun,
+  account_sid: "XXXX",
+  auth_token: "XXXX",
+  app_id: "XXXX",
+  caller: "XXX-XXXX-XXXX"
+```
+
 
