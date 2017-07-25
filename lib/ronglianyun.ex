@@ -1,18 +1,18 @@
 defmodule Ronglianyun do
-  @moduledoc """
-  Documentation for Ronglianyun.
-  """
+  use GenServer
 
-  @doc """
-  Hello world.
+  # GenServer APIs
+  def start_link do
+    GenServer.start_link(__MODULE__, :ok, [name: __MODULE__])
+  end
 
-  ## Examples
+  # GenServer Callbacks
+  def handle_call({:send_to, {phone, content} = _opts}, _from, _state) do
+    {:reply, Ronglianyun.Query.to(phone, content), nil}
+  end
 
-      iex> Ronglianyun.hello
-      :world
-
-  """
-  def hello do
-    :world
+  # APIs
+  def send(phone, content) do
+    GenServer.call(Ronglianyun, {:send_to, {phone, content}})
   end
 end
