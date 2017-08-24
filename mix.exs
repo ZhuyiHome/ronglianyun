@@ -29,9 +29,9 @@ defmodule Ronglianyun.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, "~> 0.10.0"},
+    [{:httpoison, "~> 0.10"},
      {:inflex, "~> 1.8.1"},
-     {:poison, "~> 3.1"},
+     {:poison, "~> 2.2"},
      {:sweet_xml, "~> 0.6.5"},
      {:timex, "~> 3.0"},]
   end
