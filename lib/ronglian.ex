@@ -1,4 +1,4 @@
-defmodule Ronglianyun do
+defmodule Ronglian do
   use GenServer
 
   # GenServer APIs
@@ -8,11 +8,11 @@ defmodule Ronglianyun do
 
   # GenServer Callbacks
   def handle_call({:send_to, {phone, content} = _opts}, _from, _state) do
-    {:reply, Ronglianyun.Query.to(phone, content), nil}
+    {:reply, Ronglian.Query.to(phone, content), nil}
   end
 
   # APIs
   def send(phone, content) do
-    GenServer.call(Ronglianyun, {:send_to, {phone, content}})
+    GenServer.call(Ronglian, {:send_to, {phone, content}})
   end
 end

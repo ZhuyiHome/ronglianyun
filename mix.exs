@@ -1,9 +1,9 @@
-defmodule Ronglianyun.Mixfile do
+defmodule Ronglian.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :ronglianyun,
-     version: "0.1.0",
+    [app: :ronglian,
+     version: "0.2.0",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -16,7 +16,7 @@ defmodule Ronglianyun.Mixfile do
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
     [extra_applications: [:logger, :poison, :sweet_xml],
-     mod: {Ronglianyun.Application, []}]
+     mod: {Ronglian.Application, []}]
   end
 
   # Dependencies can be Hex packages:
