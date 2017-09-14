@@ -1,14 +1,14 @@
-defmodule Ronglianyun.Application do
+defmodule Ronglian.Application do
   use Application
 
   def start(_type, _args) do
     import Supervisor.Spec
 
     children = [
-      worker(Ronglianyun, [])
+      worker(Ronglian, [])
     ]
 
-    opts = [strategy: :one_for_one, name: Ronglianyun.Supervisor]
+    opts = [strategy: :one_for_one, name: Ronglian.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

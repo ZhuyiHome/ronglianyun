@@ -1,6 +1,6 @@
-defmodule Ronglianyun.Query do
+defmodule Ronglian.Query do
   @moduledoc """
-  Ronglianyun voice code
+  Ronglian voice code
   http://www.yuntongxun.com/doc/rest/voicecode/3_3_2_1.html
   """
   alias HTTPoison.Error
@@ -8,10 +8,10 @@ defmodule Ronglianyun.Query do
   import SweetXml
 
   @url "https://app.cloopen.com:8883"
-  @account_sid  Application.get_env(:ronglianyun, :account_sid)
-  @auth_token   Application.get_env(:ronglianyun, :auth_token)
-  @app_id       Application.get_env(:ronglianyun, :app_id)
-  @caller       Application.get_env(:ronglianyun, :caller)
+  @account_sid  Application.get_env(:ronglian, :account_sid)
+  @auth_token   Application.get_env(:ronglian, :auth_token)
+  @app_id       Application.get_env(:ronglian, :app_id)
+  @caller       Application.get_env(:ronglian, :caller)
 
   @doc """
   请求语音验证码
